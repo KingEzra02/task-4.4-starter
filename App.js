@@ -33,6 +33,7 @@ function addElement() {
   root.style.alignItems = "center";
   root.style.marginTop = "40px";
   root.style.backgroundColor = "#d49999ff";
+  root.style.borderRadius = "30px";
   // Set up input and button
   input.type = "text";
   input.placeholder = "Enter task";
@@ -64,7 +65,7 @@ function addElement() {
       checkbox.type = "checkbox";
       checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
-          taskItem.style.textDecoration = "line-through, #bb0a0aff";
+          taskItem.style.textDecoration = "line-through";
           incompleteTasks--; // Decrement count when marked complete
         } else {
           taskItem.style.textDecoration = "none";
