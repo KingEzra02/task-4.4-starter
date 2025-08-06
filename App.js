@@ -21,13 +21,13 @@ function addElement() {
   document.body.style.margin = "0";
   document.body.style.padding = "20px";
   document.body.style.fontFamily = "Arial, sans-serif";
-  document.body.style.backgroundColor = "#f5f5f5";
+  // document.body.style.backgroundColor = "#f5f5f5";
   
   // Container styling
   container.style.width = "400px";
   container.style.margin = "40px auto";
   container.style.padding = "30px";
-  container.style.backgroundColor = "#ffffff";
+  container.style.backgroundColor = "#d16363ff";
   container.style.borderRadius = "15px";
   container.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
   
