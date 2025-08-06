@@ -9,11 +9,16 @@ function addElement() {
   const button = document.createElement("button");
   const input = document.createElement("input");
   const taskCountDisplay = document.createElement("p"); // New element to show task count
+  const taskHeader = document.createElement("h2");
+  taskHeader.textContent = "Task List";
   let totalTasks = 0;
   let incompleteTasks = 0;
 
   //Apply inline styles
 
+  taskCountDisplay.style.textAlign = "center";
+  input.style.width = "300px";
+  input.style.margin = "0 auto";
   button.style.margin = "10px 0";
   button.style.border = "none";
   button.style.padding = "10px";
@@ -25,6 +30,9 @@ function addElement() {
   button.style.alignSelf = "center";
   root.style.display = "flex";
   root.style.flexDirection = "column";
+  root.style.alignItems = "center";
+  root.style.marginTop = "40px";
+  root.style.backgroundColor = "#d49999ff";
   // Set up input and button
   input.type = "text";
   input.placeholder = "Enter task";
@@ -35,6 +43,8 @@ function addElement() {
   root.appendChild(taskCountDisplay);
   root.appendChild(input);
   root.appendChild(button);
+  root.appendChild(taskHeader);
+  taskHeader.style.textAlign = "center";
 
   button.addEventListener("click", function (event) {
     event.preventDefault();
@@ -54,7 +64,7 @@ function addElement() {
       checkbox.type = "checkbox";
       checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
-          taskItem.style.textDecoration = "line-through";
+          taskItem.style.textDecoration = "line-through, #bb0a0aff";
           incompleteTasks--; // Decrement count when marked complete
         } else {
           taskItem.style.textDecoration = "none";
